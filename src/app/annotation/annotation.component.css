@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .label-box {
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .label-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .label-button {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .close {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .document-container textarea {
+    width: 400px;
+    height: 200px;
+    padding: 5px;
+  }
+  
+  .annotations-container .annotated-text {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+  }
+  

@@ -1,0 +1,32 @@
+<div class="container">
+  
+  <div class="label-box">
+    <div class="input-container">
+      <input [(ngModel)]="newLabelValue" placeholder="Label value">
+      <input [(ngModel)]="newLabelColor" placeholder="Label color">
+      <button (click)="addLabel()">Add Label</button>
+    </div>
+    <div class="label-container">
+      <div *ngFor="let label of labels; let i = index" class="label-button" [style.background-color]="label.color">
+        <button (click)="annotateLabel(label.value)">{{ label.value }}</button>
+        <span class="close" (click)="removeLabel(i)">x</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="document-container">
+    <h2>Document</h2>
+    <textarea #documentInput [(ngModel)]="document" id="documentInput" placeholder="Enter the document text"></textarea>
+  </div>
+
+  
+  <div class="annotations-container">
+    <h2>Annotated Document</h2>
+    <div class="annotated-text" [innerHTML]="getAnnotatedText()"></div>
+  </div>
+</div>
+
+<div>
+    <button (click)="exportAnnotations()">Export Annotations</button>
+  </div>
